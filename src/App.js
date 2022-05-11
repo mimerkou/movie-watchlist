@@ -6,9 +6,11 @@ import Watched from './components/Watched';
 import Add from './components/Add';
 import './App.css';
 
+import { GlobalProvider } from './context/GlobalState';
+
 const App = () => {
   return (
-    <>
+    <GlobalProvider>
       <BrowserRouter>
         <Header />
         <Routes>
@@ -17,7 +19,7 @@ const App = () => {
           <Route path="/add" element={<Add />} />
         </Routes>
       </BrowserRouter>
-    </>
+    </GlobalProvider>
   );
 };
 
